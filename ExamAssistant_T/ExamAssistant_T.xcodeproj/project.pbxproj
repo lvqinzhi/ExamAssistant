@@ -1,0 +1,515 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8E00508327CCF12F006978EA /* FlutterSeatTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E00508227CCF12F006978EA /* FlutterSeatTableVC.swift */; };
+		8E00508527CDF8FA006978EA /* UserCenterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E00508427CDF8FA006978EA /* UserCenterVC.swift */; };
+		8E07044327DCD740006B8248 /* AddStudentInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E07044127DCD740006B8248 /* AddStudentInfoVC.swift */; };
+		8E07044427DCD740006B8248 /* AddStudentInfoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E07044227DCD740006B8248 /* AddStudentInfoVC.xib */; };
+		8E72C3E827D5F3C6006785C6 /* StudentListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E72C3E727D5F3C6006785C6 /* StudentListVC.swift */; };
+		8E963FAA27BFB04700305F77 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E963FA927BFB04700305F77 /* AppDelegate.swift */; };
+		8E963FAC27BFB04700305F77 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E963FAB27BFB04700305F77 /* SceneDelegate.swift */; };
+		8E963FAE27BFB04700305F77 /* SeatTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E963FAD27BFB04700305F77 /* SeatTableVC.swift */; };
+		8E963FB127BFB04700305F77 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E963FAF27BFB04700305F77 /* Main.storyboard */; };
+		8E963FB427BFB04700305F77 /* ExamAssistant_T.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8E963FB227BFB04700305F77 /* ExamAssistant_T.xcdatamodeld */; };
+		8E963FB627BFB04800305F77 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E963FB527BFB04800305F77 /* Assets.xcassets */; };
+		8E963FB927BFB04800305F77 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E963FB727BFB04800305F77 /* LaunchScreen.storyboard */; };
+		CA5ECE882B70C3D27D37313C /* Pods_ExamAssistant_T.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DD1AF5CA2EA12163B6B3D45 /* Pods_ExamAssistant_T.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		09A6B6DE28D722A77BF080C9 /* Pods-ExamAssistant_T.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExamAssistant_T.release.xcconfig"; path = "Target Support Files/Pods-ExamAssistant_T/Pods-ExamAssistant_T.release.xcconfig"; sourceTree = "<group>"; };
+		6444FEEDFDABE87D932B7138 /* Pods-ExamAssistant_T.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExamAssistant_T.debug.xcconfig"; path = "Target Support Files/Pods-ExamAssistant_T/Pods-ExamAssistant_T.debug.xcconfig"; sourceTree = "<group>"; };
+		7DD1AF5CA2EA12163B6B3D45 /* Pods_ExamAssistant_T.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ExamAssistant_T.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E00508227CCF12F006978EA /* FlutterSeatTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlutterSeatTableVC.swift; sourceTree = "<group>"; };
+		8E00508427CDF8FA006978EA /* UserCenterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCenterVC.swift; sourceTree = "<group>"; };
+		8E07044127DCD740006B8248 /* AddStudentInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddStudentInfoVC.swift; sourceTree = "<group>"; };
+		8E07044227DCD740006B8248 /* AddStudentInfoVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddStudentInfoVC.xib; sourceTree = "<group>"; };
+		8E72C3E727D5F3C6006785C6 /* StudentListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentListVC.swift; sourceTree = "<group>"; };
+		8E963FA627BFB04700305F77 /* ExamAssistant_T.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExamAssistant_T.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E963FA927BFB04700305F77 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8E963FAB27BFB04700305F77 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		8E963FAD27BFB04700305F77 /* SeatTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeatTableVC.swift; sourceTree = "<group>"; };
+		8E963FB027BFB04700305F77 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8E963FB327BFB04700305F77 /* ExamAssistant_T.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ExamAssistant_T.xcdatamodel; sourceTree = "<group>"; };
+		8E963FB527BFB04800305F77 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8E963FB827BFB04800305F77 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8E963FBA27BFB04800305F77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8E963FA327BFB04700305F77 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA5ECE882B70C3D27D37313C /* Pods_ExamAssistant_T.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		64B8E1C59EB2EE96655D1B6B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7DD1AF5CA2EA12163B6B3D45 /* Pods_ExamAssistant_T.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8E963F9D27BFB04700305F77 = {
+			isa = PBXGroup;
+			children = (
+				8E963FA827BFB04700305F77 /* ExamAssistant_T */,
+				8E963FA727BFB04700305F77 /* Products */,
+				AC669DA6E73CA6255164523B /* Pods */,
+				64B8E1C59EB2EE96655D1B6B /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		8E963FA727BFB04700305F77 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8E963FA627BFB04700305F77 /* ExamAssistant_T.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8E963FA827BFB04700305F77 /* ExamAssistant_T */ = {
+			isa = PBXGroup;
+			children = (
+				8EB8AE9327DB193100390F9B /* UserCenterClass */,
+				8EB8AE9127DB190200390F9B /* SeatTableClass */,
+				8EB8AE9227DB191700390F9B /* StudentListClass */,
+				8E963FA927BFB04700305F77 /* AppDelegate.swift */,
+				8E963FAB27BFB04700305F77 /* SceneDelegate.swift */,
+				8E963FAF27BFB04700305F77 /* Main.storyboard */,
+				8E963FB527BFB04800305F77 /* Assets.xcassets */,
+				8E963FB727BFB04800305F77 /* LaunchScreen.storyboard */,
+				8E963FBA27BFB04800305F77 /* Info.plist */,
+				8E963FB227BFB04700305F77 /* ExamAssistant_T.xcdatamodeld */,
+			);
+			path = ExamAssistant_T;
+			sourceTree = "<group>";
+		};
+		8EB8AE9127DB190200390F9B /* SeatTableClass */ = {
+			isa = PBXGroup;
+			children = (
+				8E00508227CCF12F006978EA /* FlutterSeatTableVC.swift */,
+				8E963FAD27BFB04700305F77 /* SeatTableVC.swift */,
+			);
+			path = SeatTableClass;
+			sourceTree = "<group>";
+		};
+		8EB8AE9227DB191700390F9B /* StudentListClass */ = {
+			isa = PBXGroup;
+			children = (
+				8E72C3E727D5F3C6006785C6 /* StudentListVC.swift */,
+				8E07044127DCD740006B8248 /* AddStudentInfoVC.swift */,
+				8E07044227DCD740006B8248 /* AddStudentInfoVC.xib */,
+			);
+			path = StudentListClass;
+			sourceTree = "<group>";
+		};
+		8EB8AE9327DB193100390F9B /* UserCenterClass */ = {
+			isa = PBXGroup;
+			children = (
+				8E00508427CDF8FA006978EA /* UserCenterVC.swift */,
+			);
+			path = UserCenterClass;
+			sourceTree = "<group>";
+		};
+		AC669DA6E73CA6255164523B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6444FEEDFDABE87D932B7138 /* Pods-ExamAssistant_T.debug.xcconfig */,
+				09A6B6DE28D722A77BF080C9 /* Pods-ExamAssistant_T.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8E963FA527BFB04700305F77 /* ExamAssistant_T */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8E963FBD27BFB04800305F77 /* Build configuration list for PBXNativeTarget "ExamAssistant_T" */;
+			buildPhases = (
+				3FB463C2CAE042D7AA6C2800 /* [CP] Check Pods Manifest.lock */,
+				15DF670FD8299872AAF27103 /* [CP-User] Run Flutter Build flutter_seat_table Script */,
+				8E963FA227BFB04700305F77 /* Sources */,
+				8E963FA327BFB04700305F77 /* Frameworks */,
+				8E963FA427BFB04700305F77 /* Resources */,
+				8CD680175107A060EC47CED1 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ExamAssistant_T;
+			productName = ExamAssistant_T;
+			productReference = 8E963FA627BFB04700305F77 /* ExamAssistant_T.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8E963F9E27BFB04700305F77 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					8E963FA527BFB04700305F77 = {
+						CreatedOnToolsVersion = 13.2;
+					};
+				};
+			};
+			buildConfigurationList = 8E963FA127BFB04700305F77 /* Build configuration list for PBXProject "ExamAssistant_T" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8E963F9D27BFB04700305F77;
+			productRefGroup = 8E963FA727BFB04700305F77 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8E963FA527BFB04700305F77 /* ExamAssistant_T */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8E963FA427BFB04700305F77 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8E963FB927BFB04800305F77 /* LaunchScreen.storyboard in Resources */,
+				8E963FB627BFB04800305F77 /* Assets.xcassets in Resources */,
+				8E07044427DCD740006B8248 /* AddStudentInfoVC.xib in Resources */,
+				8E963FB127BFB04700305F77 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		15DF670FD8299872AAF27103 /* [CP-User] Run Flutter Build flutter_seat_table Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "[CP-User] Run Flutter Build flutter_seat_table Script";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\nset -u\nsource \"${SRCROOT}/../flutter_seat_table/.ios/Flutter/flutter_export_environment.sh\"\nexport VERBOSE_SCRIPT_LOGGING=1 && \"$FLUTTER_ROOT\"/packages/flutter_tools/bin/xcode_backend.sh build";
+		};
+		3FB463C2CAE042D7AA6C2800 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ExamAssistant_T-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8CD680175107A060EC47CED1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ExamAssistant_T/Pods-ExamAssistant_T-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ExamAssistant_T/Pods-ExamAssistant_T-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ExamAssistant_T/Pods-ExamAssistant_T-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8E963FA227BFB04700305F77 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8E963FB427BFB04700305F77 /* ExamAssistant_T.xcdatamodeld in Sources */,
+				8E00508327CCF12F006978EA /* FlutterSeatTableVC.swift in Sources */,
+				8E00508527CDF8FA006978EA /* UserCenterVC.swift in Sources */,
+				8E963FAE27BFB04700305F77 /* SeatTableVC.swift in Sources */,
+				8E72C3E827D5F3C6006785C6 /* StudentListVC.swift in Sources */,
+				8E963FAA27BFB04700305F77 /* AppDelegate.swift in Sources */,
+				8E07044327DCD740006B8248 /* AddStudentInfoVC.swift in Sources */,
+				8E963FAC27BFB04700305F77 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		8E963FAF27BFB04700305F77 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8E963FB027BFB04700305F77 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8E963FB727BFB04800305F77 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8E963FB827BFB04800305F77 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8E963FBB27BFB04800305F77 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8E963FBC27BFB04800305F77 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8E963FBE27BFB04800305F77 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6444FEEDFDABE87D932B7138 /* Pods-ExamAssistant_T.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7374UNJL77;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ExamAssistant_T/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "考试助手-教师版";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.lvqinzhi.ExamAssistant-T";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8E963FBF27BFB04800305F77 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 09A6B6DE28D722A77BF080C9 /* Pods-ExamAssistant_T.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7374UNJL77;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ExamAssistant_T/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "考试助手-教师版";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.lvqinzhi.ExamAssistant-T";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8E963FA127BFB04700305F77 /* Build configuration list for PBXProject "ExamAssistant_T" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8E963FBB27BFB04800305F77 /* Debug */,
+				8E963FBC27BFB04800305F77 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8E963FBD27BFB04800305F77 /* Build configuration list for PBXNativeTarget "ExamAssistant_T" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8E963FBE27BFB04800305F77 /* Debug */,
+				8E963FBF27BFB04800305F77 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		8E963FB227BFB04700305F77 /* ExamAssistant_T.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				8E963FB327BFB04700305F77 /* ExamAssistant_T.xcdatamodel */,
+			);
+			currentVersion = 8E963FB327BFB04700305F77 /* ExamAssistant_T.xcdatamodel */;
+			path = ExamAssistant_T.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 8E963F9E27BFB04700305F77 /* Project object */;
+}
