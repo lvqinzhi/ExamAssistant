@@ -9,7 +9,15 @@ import UIKit
 
 class StudentListVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    var studentData = ["Amy", "Bob", "David", "Green", "Mike"]
+    var studentData = ["31899001", "31899008", "31899057", "31899182", "31899208"]
+    
+    lazy var tableView: UITableView = {
+        let studentTableView = UITableView.init(frame: self.view.frame, style: UITableView.Style.plain)
+        studentTableView.separatorStyle = UITableViewCell.SeparatorStyle.singleLine
+        studentTableView.delegate = self
+        studentTableView.dataSource = self
+        return studentTableView
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,21 +26,14 @@ class StudentListVC: UIViewController, UITableViewDataSource, UITableViewDelegat
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "编辑", style: UIBarButtonItem.Style.plain, target: self, action: #selector(showEditSheet))
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "导入", style: UIBarButtonItem.Style.plain, target: self, action: nil)
         
-        let screenRect = UIScreen.main.bounds
-        let tableRect = CGRect(x: 0, y: 20, width: screenRect.size.width, height: screenRect.size.height - 88)
-        
-        let tableView = UITableView(frame: tableRect)
-        tableView.dataSource = self
-        tableView.delegate = self
-        tableView.setEditing(true, animated: true)
-        self.view.addSubview(tableView)
+        self.view.addSubview(self.tableView)
     }
     
     
     @objc func showEditSheet() {
-        let actionSheet = UIAlertController(title: "请选择您要进行的操作", message: "编辑完成后请前往座位表页面刷新状态", preferredStyle: UIAlertController.Style.actionSheet)
+        let actionSheet = UIAlertController(title: "请选择您要进行的操作", message: "编辑完成后请前往座位表页面刷新状态。", preferredStyle: UIAlertController.Style.actionSheet)
         let add = UIAlertAction(title: "添加行", style: UIAlertAction.Style.default, handler: {(UIAlertAction) -> Void in self.addInfo()})
-        let delete = UIAlertAction(title: "删除行", style: UIAlertAction.Style.destructive, handler: nil)
+        let delete = UIAlertAction(title: "删除行", style: UIAlertAction.Style.destructive, handler: {(UIAlertAction) -> Void in self.setEditStatus()})
         let cancel = UIAlertAction(title: "取消", style: UIAlertAction.Style.cancel, handler: nil)
         actionSheet.addAction(add)
         actionSheet.addAction(delete)
@@ -41,10 +42,15 @@ class StudentListVC: UIViewController, UITableViewDataSource, UITableViewDelegat
     }
     
     
-   func addInfo() {
+    func addInfo() {
         let addInfoVC = AddStudentInfoVC()
         addInfoVC.viewController = self
         self.present(addInfoVC, animated: true, completion: nil)
+    }
+    
+    
+    func setEditStatus() {
+        self.tableView.setEditing(true, animated: true)
     }
     
     
@@ -68,6 +74,11 @@ class StudentListVC: UIViewController, UITableViewDataSource, UITableViewDelegat
     
     func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
         return UITableViewCell.EditingStyle.delete
+    }
+    
+    
+    func tableView(_ tableView: UITableView, titleForDeleteConfirmationButtonForRowAt indexPath: IndexPath) -> String? {
+        return "删除"
     }
     
     

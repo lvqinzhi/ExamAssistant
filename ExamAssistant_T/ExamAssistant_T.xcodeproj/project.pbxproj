@@ -11,6 +11,7 @@
 		8E00508527CDF8FA006978EA /* UserCenterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E00508427CDF8FA006978EA /* UserCenterVC.swift */; };
 		8E07044327DCD740006B8248 /* AddStudentInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E07044127DCD740006B8248 /* AddStudentInfoVC.swift */; };
 		8E07044427DCD740006B8248 /* AddStudentInfoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E07044227DCD740006B8248 /* AddStudentInfoVC.xib */; };
+		8E4D037827E0ABBB009035D8 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4D037727E0ABBB009035D8 /* LoginVC.swift */; };
 		8E72C3E827D5F3C6006785C6 /* StudentListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E72C3E727D5F3C6006785C6 /* StudentListVC.swift */; };
 		8E963FAA27BFB04700305F77 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E963FA927BFB04700305F77 /* AppDelegate.swift */; };
 		8E963FAC27BFB04700305F77 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E963FAB27BFB04700305F77 /* SceneDelegate.swift */; };
@@ -30,6 +31,7 @@
 		8E00508427CDF8FA006978EA /* UserCenterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCenterVC.swift; sourceTree = "<group>"; };
 		8E07044127DCD740006B8248 /* AddStudentInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddStudentInfoVC.swift; sourceTree = "<group>"; };
 		8E07044227DCD740006B8248 /* AddStudentInfoVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddStudentInfoVC.xib; sourceTree = "<group>"; };
+		8E4D037727E0ABBB009035D8 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		8E72C3E727D5F3C6006785C6 /* StudentListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentListVC.swift; sourceTree = "<group>"; };
 		8E963FA627BFB04700305F77 /* ExamAssistant_T.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExamAssistant_T.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E963FA927BFB04700305F77 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -83,9 +85,10 @@
 		8E963FA827BFB04700305F77 /* ExamAssistant_T */ = {
 			isa = PBXGroup;
 			children = (
-				8EB8AE9327DB193100390F9B /* UserCenterClass */,
+				8E4D037727E0ABBB009035D8 /* LoginVC.swift */,
 				8EB8AE9127DB190200390F9B /* SeatTableClass */,
 				8EB8AE9227DB191700390F9B /* StudentListClass */,
+				8EB8AE9327DB193100390F9B /* UserCenterClass */,
 				8E963FA927BFB04700305F77 /* AppDelegate.swift */,
 				8E963FAB27BFB04700305F77 /* SceneDelegate.swift */,
 				8E963FAF27BFB04700305F77 /* Main.storyboard */,
@@ -265,6 +268,7 @@
 				8E00508527CDF8FA006978EA /* UserCenterVC.swift in Sources */,
 				8E963FAE27BFB04700305F77 /* SeatTableVC.swift in Sources */,
 				8E72C3E827D5F3C6006785C6 /* StudentListVC.swift in Sources */,
+				8E4D037827E0ABBB009035D8 /* LoginVC.swift in Sources */,
 				8E963FAA27BFB04700305F77 /* AppDelegate.swift in Sources */,
 				8E07044327DCD740006B8248 /* AddStudentInfoVC.swift in Sources */,
 				8E963FAC27BFB04700305F77 /* SceneDelegate.swift in Sources */,

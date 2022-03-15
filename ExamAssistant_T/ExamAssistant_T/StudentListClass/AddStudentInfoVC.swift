@@ -23,7 +23,7 @@ class AddStudentInfoVC: UIViewController {
     @IBAction func importInfo(_ sender: Any) {
         if numberText.text == "" || nameText.text == "" || phoneText.text == "" {
             showAddEmptyAlert()
-        } else if !(isNumber(string: numberText.text! as NSString)) || !(isPhoneNumber(string: phoneText.text! as NSString)) {
+        } else if !(isDigit(string: numberText.text! as NSString)) || isDigit(string: nameText.text! as NSString) || !(isPhoneNumber(string: phoneText.text! as NSString)) {
             showAddIllegalAlert()
         } else {
             importTag = 1
@@ -45,7 +45,7 @@ class AddStudentInfoVC: UIViewController {
     }
     
     
-    func isNumber(string: NSString) -> Bool {
+    func isDigit(string: NSString) -> Bool {
         let scan: Scanner = Scanner(string: string as String)
         var val: Int = 0
         return scan.scanInt(&val) && scan.isAtEnd
@@ -80,10 +80,10 @@ class AddStudentInfoVC: UIViewController {
     
     @objc func showEmptyExitAlert() {
         let alert = UIAlertController(title: "警告", message: "您还没有输入任何信息，是否确定退出当前页？", preferredStyle: UIAlertController.Style.alert)
+        let exit = UIAlertAction(title: "退出", style: UIAlertAction.Style.destructive, handler: {(UIAlertAction) -> Void in self.dismiss(animated: true, completion: nil)})
         let edit = UIAlertAction(title: "继续编辑", style: UIAlertAction.Style.default, handler: nil)
-        let exit = UIAlertAction(title: "退出", style: UIAlertAction.Style.default, handler: {(UIAlertAction) -> Void in self.dismiss(animated: true, completion: nil)})
-        alert.addAction(edit)
         alert.addAction(exit)
+        alert.addAction(edit)
         self.present(alert, animated: true, completion: nil)
     }
     
