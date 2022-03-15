@@ -9,20 +9,22 @@ import UIKit
 
 class StudentListVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    var studentData = ["31899001", "31899008", "31899057", "31899182", "31899208"]
+    var studentData = ["31899001", "31899002", "31899003", "31899004", "31899005", "31899006", "31899007", "31899008", "31899009", "31899010", "31899011", "31899012", "31899013", "31899014", "31899015", "31899016", "31899017", "31899018", "31899019", "31899020", "31899021", "31899022", "31899023", "31899024", "31899025", "31899026", "31899027", "31899028", "31899029", "31899030"]
     
     lazy var tableView: UITableView = {
-        let studentTableView = UITableView.init(frame: self.view.frame, style: UITableView.Style.plain)
-        studentTableView.separatorStyle = UITableViewCell.SeparatorStyle.singleLine
-        studentTableView.delegate = self
-        studentTableView.dataSource = self
-        return studentTableView
+        let table = UITableView.init(frame: self.view.frame, style: UITableView.Style.plain)
+        table.separatorStyle = UITableViewCell.SeparatorStyle.singleLine
+        table.delegate = self
+        table.dataSource = self
+        return table
     }()
+    
+    lazy var studentCount: Int = studentData.count
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationItem.title = "电路原理 30人"
+        self.navigationItem.title = String(format: "电路原理 %d人", studentCount)
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "编辑", style: UIBarButtonItem.Style.plain, target: self, action: #selector(showEditSheet))
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "导入", style: UIBarButtonItem.Style.plain, target: self, action: nil)
         
@@ -51,6 +53,15 @@ class StudentListVC: UIViewController, UITableViewDataSource, UITableViewDelegat
     
     func setEditStatus() {
         self.tableView.setEditing(true, animated: true)
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "完成", style: UIBarButtonItem.Style.plain, target: self, action: #selector(cancelEditStatus))
+        navigationItem.rightBarButtonItem?.isEnabled = false
+    }
+    
+    
+    @objc func cancelEditStatus() {
+        self.tableView.setEditing(false, animated: true)
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "编辑", style: UIBarButtonItem.Style.plain, target: self, action: #selector(showEditSheet))
+        navigationItem.rightBarButtonItem?.isEnabled = true
     }
     
     
@@ -86,6 +97,8 @@ class StudentListVC: UIViewController, UITableViewDataSource, UITableViewDelegat
         if editingStyle == UITableViewCell.EditingStyle.delete {
             studentData.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.bottom)
+            studentCount -= 1
+            navigationItem.title = String(format: "电路原理 %d人", studentCount)
         }
     }
     

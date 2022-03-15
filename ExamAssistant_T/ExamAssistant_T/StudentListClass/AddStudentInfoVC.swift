@@ -12,6 +12,7 @@ class AddStudentInfoVC: UIViewController {
     weak var viewController: UIViewController?
     @IBOutlet weak var numberText: UITextField!
     @IBOutlet weak var nameText: UITextField!
+    @IBOutlet weak var classText: UITextField!
     @IBOutlet weak var phoneText: UITextField!
     var importTag: Int = 0
     
@@ -21,9 +22,9 @@ class AddStudentInfoVC: UIViewController {
     
     
     @IBAction func importInfo(_ sender: Any) {
-        if numberText.text == "" || nameText.text == "" || phoneText.text == "" {
+        if numberText.text == "" || nameText.text == "" || classText.text == "" || phoneText.text == "" {
             showAddEmptyAlert()
-        } else if !(isDigit(string: numberText.text! as NSString)) || isDigit(string: nameText.text! as NSString) || !(isPhoneNumber(string: phoneText.text! as NSString)) {
+        } else if !(isPureDigit(string: numberText.text! as NSString)) || isPureDigit(string: nameText.text! as NSString) || isPureDigit(string: classText.text! as NSString) || !(isPhoneNumber(string: phoneText.text! as NSString)) {
             showAddIllegalAlert()
         } else {
             importTag = 1
@@ -45,7 +46,7 @@ class AddStudentInfoVC: UIViewController {
     }
     
     
-    func isDigit(string: NSString) -> Bool {
+    func isPureDigit(string: NSString) -> Bool {
         let scan: Scanner = Scanner(string: string as String)
         var val: Int = 0
         return scan.scanInt(&val) && scan.isAtEnd

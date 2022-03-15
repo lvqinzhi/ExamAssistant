@@ -103,8 +103,8 @@
 		8EB8AE9127DB190200390F9B /* SeatTableClass */ = {
 			isa = PBXGroup;
 			children = (
-				8E00508227CCF12F006978EA /* FlutterSeatTableVC.swift */,
 				8E963FAD27BFB04700305F77 /* SeatTableVC.swift */,
+				8E00508227CCF12F006978EA /* FlutterSeatTableVC.swift */,
 			);
 			path = SeatTableClass;
 			sourceTree = "<group>";
@@ -423,9 +423,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7374UNJL77;
+				ENABLE_BITCODE = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ExamAssistant_T/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "考试助手-教师版";
+				INFOPLIST_KEY_CFBundleDisplayName = "考试助手 教师版";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -456,9 +457,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7374UNJL77;
+				ENABLE_BITCODE = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ExamAssistant_T/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "考试助手-教师版";
+				INFOPLIST_KEY_CFBundleDisplayName = "考试助手 教师版";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
