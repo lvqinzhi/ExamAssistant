@@ -17,17 +17,14 @@ class FlutterSeatTableVC: FlutterViewController {
         super.init(engine: newEngine, nibName: nil, bundle: nil)
     }
     
-    
     required convenience init(coder aDecoder: NSCoder) {
         self.init(withEntrypoint: nil)
     }
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         GeneratedPluginRegistrant.register(with: self.pluginRegistry())
     }
-    
     
 }
 

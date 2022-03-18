@@ -24,14 +24,12 @@ class SeatTableVC: UIViewController {
         subFlutterVC.didMove(toParent: self)
     }
     
-    
     @objc func showRefreshAlert() {
         let alert = UIAlertController(title: "完成", message: "学生状态刷新成功。", preferredStyle: UIAlertController.Style.alert)
         let yes = UIAlertAction(title: "确定", style: UIAlertAction.Style.default, handler: nil)
         alert.addAction(yes)
         self.present(alert, animated: true, completion: nil)
     }
-
 
 }
 

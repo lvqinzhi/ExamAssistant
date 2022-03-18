@@ -65,8 +65,17 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="登录"/>
                                 <connections>
-                                    <action selector="userLogin:" destination="bD2-Se-CJN" eventType="touchUpInside" id="ST2-hd-gjE"/>
+                                    <action selector="userLogin:" destination="bD2-Se-CJN" eventType="touchUpInside" id="SOV-83-D07"/>
                                     <segue destination="TBo-tJ-bZh" kind="modal" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="7mv-jY-ez9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b8w-87-d51">
+                                <rect key="frame" x="157" y="390" width="60" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="注册"/>
+                                <connections>
+                                    <action selector="userRegister:" destination="bD2-Se-CJN" eventType="touchUpInside" id="7n9-Dh-9O4"/>
                                 </connections>
                             </button>
                         </subviews>

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreData
 
 class LoginVC: UIViewController {
 
@@ -20,11 +21,13 @@ class LoginVC: UIViewController {
         self.navigationItem.largeTitleDisplayMode = UINavigationItem.LargeTitleDisplayMode.automatic
     }
     
-    
     @IBAction func userLogin(_ sender: Any) {
         
     }
     
+    @IBAction func userRegister(_ sender: Any) {
+        
+    }
     
 }
 

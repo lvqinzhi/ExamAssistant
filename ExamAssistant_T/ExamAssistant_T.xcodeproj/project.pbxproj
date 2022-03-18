@@ -423,7 +423,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7374UNJL77;
-				ENABLE_BITCODE = NO;
+				ENABLE_BITCODE = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ExamAssistant_T/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "考试助手 教师版";
@@ -457,7 +457,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7374UNJL77;
-				ENABLE_BITCODE = NO;
+				ENABLE_BITCODE = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ExamAssistant_T/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "考试助手 教师版";

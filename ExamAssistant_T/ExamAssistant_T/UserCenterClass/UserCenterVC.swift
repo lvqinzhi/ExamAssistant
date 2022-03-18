@@ -17,26 +17,24 @@ class UserCenterVC: UIViewController {
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "camera"), style: UIBarButtonItem.Style.plain, target: self, action: nil)
     }
     
-    
     @objc func showExitWarningAlert() {
         let alert = UIAlertController(title: "警告", message: "您确定要退出登录吗？", preferredStyle: UIAlertController.Style.alert)
-        let enter = UIAlertAction(title: "确定", style: UIAlertAction.Style.destructive, handler: {(UIAlertAction) -> Void in self.showExitWarningAgainAlert()})
-        let cancel = UIAlertAction(title: "取消", style: UIAlertAction.Style.default, handler: nil
+        let cancel = UIAlertAction(title: "取消", style: UIAlertAction.Style.cancel, handler: nil
         )
-        alert.addAction(enter)
+        let enter = UIAlertAction(title: "确定", style: UIAlertAction.Style.destructive, handler: {(UIAlertAction) -> Void in self.showExitWarningAgainAlert()})
         alert.addAction(cancel)
+        alert.addAction(enter)
         self.present(alert, animated: true, completion: nil)
     }
     
     func showExitWarningAgainAlert() {
         let alert = UIAlertController(title: "警告", message: "请再次确认是否退出。", preferredStyle: UIAlertController.Style.alert)
+        let cancel = UIAlertAction(title: "取消", style: UIAlertAction.Style.cancel, handler: nil)
         let enter = UIAlertAction(title: "确定", style: UIAlertAction.Style.destructive, handler: {(UIAlertAction) -> Void in self.dismiss(animated: true, completion: nil)})
-        let cancel = UIAlertAction(title: "取消", style: UIAlertAction.Style.default, handler: nil)
-        alert.addAction(enter)
         alert.addAction(cancel)
+        alert.addAction(enter)
         self.present(alert, animated: true, completion: nil)
     }
-
 
 }
 

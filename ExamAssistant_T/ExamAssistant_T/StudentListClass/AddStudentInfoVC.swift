@@ -20,7 +20,6 @@ class AddStudentInfoVC: UIViewController {
         super.viewDidLoad()
     }
     
-    
     @IBAction func importInfo(_ sender: Any) {
         if numberText.text == "" || nameText.text == "" || classText.text == "" || phoneText.text == "" {
             showAddEmptyAlert()
@@ -31,11 +30,9 @@ class AddStudentInfoVC: UIViewController {
         }
     }
     
-    
     @IBAction func cancelAdd(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
-    
     
     @IBAction func enterAdd(_ sender: Any) {
         if importTag == 0 {
@@ -45,13 +42,11 @@ class AddStudentInfoVC: UIViewController {
         }
     }
     
-    
     func isPureDigit(string: NSString) -> Bool {
         let scan: Scanner = Scanner(string: string as String)
         var val: Int = 0
         return scan.scanInt(&val) && scan.isAtEnd
     }
-    
     
     func isPhoneNumber(string: NSString?) -> Bool {
         if let correctNumber = string {
@@ -62,14 +57,12 @@ class AddStudentInfoVC: UIViewController {
         return false;
     }
     
-    
     @objc func showAddEmptyAlert() {
         let alert = UIAlertController(title: "错误", message: "请输入完整的信息！", preferredStyle: UIAlertController.Style.alert)
         let yes = UIAlertAction(title: "确定", style: UIAlertAction.Style.default, handler: nil)
         alert.addAction(yes)
         self.present(alert, animated: true, completion: nil)
     }
-    
     
     @objc func showAddIllegalAlert() {
         let alert = UIAlertController(title: "错误", message: "请输入合法的信息！", preferredStyle: UIAlertController.Style.alert)
@@ -78,16 +71,13 @@ class AddStudentInfoVC: UIViewController {
         self.present(alert, animated: true, completion: nil)
     }
     
-    
     @objc func showEmptyExitAlert() {
         let alert = UIAlertController(title: "警告", message: "您还没有输入任何信息，是否确定退出当前页？", preferredStyle: UIAlertController.Style.alert)
+        let edit = UIAlertAction(title: "继续编辑", style: UIAlertAction.Style.cancel, handler: nil)
         let exit = UIAlertAction(title: "退出", style: UIAlertAction.Style.destructive, handler: {(UIAlertAction) -> Void in self.dismiss(animated: true, completion: nil)})
-        let edit = UIAlertAction(title: "继续编辑", style: UIAlertAction.Style.default, handler: nil)
-        alert.addAction(exit)
         alert.addAction(edit)
+        alert.addAction(exit)
         self.present(alert, animated: true, completion: nil)
     }
-    
-    
 }
 
