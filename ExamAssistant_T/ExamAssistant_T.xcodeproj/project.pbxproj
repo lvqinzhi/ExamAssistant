@@ -10,14 +10,15 @@
 		8E00508327CCF12F006978EA /* FlutterSeatTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E00508227CCF12F006978EA /* FlutterSeatTableVC.swift */; };
 		8E00508527CDF8FA006978EA /* UserCenterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E00508427CDF8FA006978EA /* UserCenterVC.swift */; };
 		8E07044327DCD740006B8248 /* AddStudentInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E07044127DCD740006B8248 /* AddStudentInfoVC.swift */; };
-		8E07044427DCD740006B8248 /* AddStudentInfoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E07044227DCD740006B8248 /* AddStudentInfoVC.xib */; };
+		8E22EC9B27E6BFF800342ED2 /* StudentListVCExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E22EC9A27E6BFF800342ED2 /* StudentListVCExtension.swift */; };
+		8E22ECA627E6CDC000342ED2 /* StudentDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E22ECA427E6CDC000342ED2 /* StudentDetailVC.swift */; };
+		8E22ECA927E6D44800342ED2 /* AddStudentInfoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E22ECA827E6D44800342ED2 /* AddStudentInfoVC.xib */; };
 		8E4D037827E0ABBB009035D8 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4D037727E0ABBB009035D8 /* LoginVC.swift */; };
 		8E72C3E827D5F3C6006785C6 /* StudentListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E72C3E727D5F3C6006785C6 /* StudentListVC.swift */; };
 		8E963FAA27BFB04700305F77 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E963FA927BFB04700305F77 /* AppDelegate.swift */; };
 		8E963FAC27BFB04700305F77 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E963FAB27BFB04700305F77 /* SceneDelegate.swift */; };
 		8E963FAE27BFB04700305F77 /* SeatTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E963FAD27BFB04700305F77 /* SeatTableVC.swift */; };
 		8E963FB127BFB04700305F77 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E963FAF27BFB04700305F77 /* Main.storyboard */; };
-		8E963FB427BFB04700305F77 /* ExamAssistant_T.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8E963FB227BFB04700305F77 /* ExamAssistant_T.xcdatamodeld */; };
 		8E963FB627BFB04800305F77 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E963FB527BFB04800305F77 /* Assets.xcassets */; };
 		8E963FB927BFB04800305F77 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E963FB727BFB04800305F77 /* LaunchScreen.storyboard */; };
 		CA5ECE882B70C3D27D37313C /* Pods_ExamAssistant_T.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DD1AF5CA2EA12163B6B3D45 /* Pods_ExamAssistant_T.framework */; };
@@ -30,7 +31,9 @@
 		8E00508227CCF12F006978EA /* FlutterSeatTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlutterSeatTableVC.swift; sourceTree = "<group>"; };
 		8E00508427CDF8FA006978EA /* UserCenterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCenterVC.swift; sourceTree = "<group>"; };
 		8E07044127DCD740006B8248 /* AddStudentInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddStudentInfoVC.swift; sourceTree = "<group>"; };
-		8E07044227DCD740006B8248 /* AddStudentInfoVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddStudentInfoVC.xib; sourceTree = "<group>"; };
+		8E22EC9A27E6BFF800342ED2 /* StudentListVCExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentListVCExtension.swift; sourceTree = "<group>"; };
+		8E22ECA427E6CDC000342ED2 /* StudentDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentDetailVC.swift; sourceTree = "<group>"; };
+		8E22ECA827E6D44800342ED2 /* AddStudentInfoVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddStudentInfoVC.xib; sourceTree = "<group>"; };
 		8E4D037727E0ABBB009035D8 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		8E72C3E727D5F3C6006785C6 /* StudentListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentListVC.swift; sourceTree = "<group>"; };
 		8E963FA627BFB04700305F77 /* ExamAssistant_T.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExamAssistant_T.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -38,7 +41,6 @@
 		8E963FAB27BFB04700305F77 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		8E963FAD27BFB04700305F77 /* SeatTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeatTableVC.swift; sourceTree = "<group>"; };
 		8E963FB027BFB04700305F77 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		8E963FB327BFB04700305F77 /* ExamAssistant_T.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ExamAssistant_T.xcdatamodel; sourceTree = "<group>"; };
 		8E963FB527BFB04800305F77 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8E963FB827BFB04800305F77 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8E963FBA27BFB04800305F77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -95,7 +97,6 @@
 				8E963FB527BFB04800305F77 /* Assets.xcassets */,
 				8E963FB727BFB04800305F77 /* LaunchScreen.storyboard */,
 				8E963FBA27BFB04800305F77 /* Info.plist */,
-				8E963FB227BFB04700305F77 /* ExamAssistant_T.xcdatamodeld */,
 			);
 			path = ExamAssistant_T;
 			sourceTree = "<group>";
@@ -113,8 +114,10 @@
 			isa = PBXGroup;
 			children = (
 				8E72C3E727D5F3C6006785C6 /* StudentListVC.swift */,
+				8E22EC9A27E6BFF800342ED2 /* StudentListVCExtension.swift */,
 				8E07044127DCD740006B8248 /* AddStudentInfoVC.swift */,
-				8E07044227DCD740006B8248 /* AddStudentInfoVC.xib */,
+				8E22ECA827E6D44800342ED2 /* AddStudentInfoVC.xib */,
+				8E22ECA427E6CDC000342ED2 /* StudentDetailVC.swift */,
 			);
 			path = StudentListClass;
 			sourceTree = "<group>";
@@ -199,7 +202,7 @@
 			files = (
 				8E963FB927BFB04800305F77 /* LaunchScreen.storyboard in Resources */,
 				8E963FB627BFB04800305F77 /* Assets.xcassets in Resources */,
-				8E07044427DCD740006B8248 /* AddStudentInfoVC.xib in Resources */,
+				8E22ECA927E6D44800342ED2 /* AddStudentInfoVC.xib in Resources */,
 				8E963FB127BFB04700305F77 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -263,7 +266,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8E963FB427BFB04700305F77 /* ExamAssistant_T.xcdatamodeld in Sources */,
+				8E22ECA627E6CDC000342ED2 /* StudentDetailVC.swift in Sources */,
 				8E00508327CCF12F006978EA /* FlutterSeatTableVC.swift in Sources */,
 				8E00508527CDF8FA006978EA /* UserCenterVC.swift in Sources */,
 				8E963FAE27BFB04700305F77 /* SeatTableVC.swift in Sources */,
@@ -271,6 +274,7 @@
 				8E4D037827E0ABBB009035D8 /* LoginVC.swift in Sources */,
 				8E963FAA27BFB04700305F77 /* AppDelegate.swift in Sources */,
 				8E07044327DCD740006B8248 /* AddStudentInfoVC.swift in Sources */,
+				8E22EC9B27E6BFF800342ED2 /* StudentListVCExtension.swift in Sources */,
 				8E963FAC27BFB04700305F77 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -430,6 +434,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -464,6 +469,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -503,19 +509,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		8E963FB227BFB04700305F77 /* ExamAssistant_T.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				8E963FB327BFB04700305F77 /* ExamAssistant_T.xcdatamodel */,
-			);
-			currentVersion = 8E963FB327BFB04700305F77 /* ExamAssistant_T.xcdatamodel */;
-			path = ExamAssistant_T.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 8E963F9E27BFB04700305F77 /* Project object */;
 }

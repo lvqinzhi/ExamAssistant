@@ -9,7 +9,8 @@ import UIKit
 
 class AddStudentInfoVC: UIViewController {
     
-    weak var viewController: UIViewController?
+    weak var stuListVC: UIViewController?
+    var studentCount: Int?
     @IBOutlet weak var numberText: UITextField!
     @IBOutlet weak var nameText: UITextField!
     @IBOutlet weak var classText: UITextField!
@@ -27,6 +28,8 @@ class AddStudentInfoVC: UIViewController {
             showAddIllegalAlert()
         } else {
             importTag = 1
+            studentCount! += 1
+            showSuccessAddAlert()
         }
     }
     
@@ -71,13 +74,21 @@ class AddStudentInfoVC: UIViewController {
         self.present(alert, animated: true, completion: nil)
     }
     
+    @objc func showSuccessAddAlert() {
+        let alert = UIAlertController(title: "完成", message: String(format: "录入成功，座位号为 %d 。", studentCount!), preferredStyle: UIAlertController.Style.alert)
+        let yes = UIAlertAction(title: "确定", style: UIAlertAction.Style.default, handler: nil)
+        alert.addAction(yes)
+        self.present(alert, animated: true, completion: nil)
+    }
+    
     @objc func showEmptyExitAlert() {
-        let alert = UIAlertController(title: "警告", message: "您还没有输入任何信息，是否确定退出当前页？", preferredStyle: UIAlertController.Style.alert)
+        let alert = UIAlertController(title: "警告", message: "您还没有录入任何信息，是否确定放弃已输入的内容并退出当前页？", preferredStyle: UIAlertController.Style.alert)
         let edit = UIAlertAction(title: "继续编辑", style: UIAlertAction.Style.cancel, handler: nil)
         let exit = UIAlertAction(title: "退出", style: UIAlertAction.Style.destructive, handler: {(UIAlertAction) -> Void in self.dismiss(animated: true, completion: nil)})
         alert.addAction(edit)
         alert.addAction(exit)
         self.present(alert, animated: true, completion: nil)
     }
+    
 }
 

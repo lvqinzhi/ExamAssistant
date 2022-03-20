@@ -15,6 +15,7 @@ class SeatTableVC: UIViewController {
         super.viewDidLoad()
         
         self.navigationItem.title = "电路原理 教三205"
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "导入", style: UIBarButtonItem.Style.plain, target: self, action: nil)
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "刷新", style: UIBarButtonItem.Style.plain, target: self, action: #selector(showRefreshAlert))
         
         addChild(subFlutterVC)

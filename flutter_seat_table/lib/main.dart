@@ -44,7 +44,17 @@ class _ClassSeatsPageState extends State<ClassSeatsPage> {
     '17号',
     '18号',
     '19号',
-    '20号'
+    '20号',
+    '21号',
+    '22号',
+    '23号',
+    '24号',
+    '25号',
+    '26号',
+    '27号',
+    '28号',
+    '29号',
+    '30号'
   ];
 
   List<Widget> _getWidget() {
@@ -81,22 +91,22 @@ class _ClassSeatsPageState extends State<ClassSeatsPage> {
                   elevation: 3,
                   child: Container(
                     padding: const EdgeInsets.only(top: 10),
-                    width: 80,
-                    height: 50,
+                    width: 60,
+                    height: 40,
                     child: const Text(
                       '讲台',
                       textAlign: TextAlign.center,
                       style:
-                          TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
+                          TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
                     ),
                   ),
                 )
               ],
             ),
             Wrap(
-              spacing: 10,
+              spacing: 5,
               runAlignment: WrapAlignment.center,
-              runSpacing: 10.0,
+              runSpacing: 5.0,
               children: _getWidget(),
             ),
           ],
