@@ -11,11 +11,12 @@ class AddStudentInfoVC: UIViewController {
     
     weak var stuListVC: UIViewController?
     var studentCount: Int?
+    var importTag: Int = 0
+    
     @IBOutlet weak var numberText: UITextField!
     @IBOutlet weak var nameText: UITextField!
     @IBOutlet weak var classText: UITextField!
     @IBOutlet weak var phoneText: UITextField!
-    var importTag: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()

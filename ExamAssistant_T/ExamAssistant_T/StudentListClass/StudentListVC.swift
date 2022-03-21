@@ -32,9 +32,11 @@ class StudentListVC: UIViewController {
     
     @objc func showEditSheet() {
         let actionSheet = UIAlertController(title: "请选择您要进行的操作", message: "编辑完成后请前往座位表页面刷新状态。", preferredStyle: UIAlertController.Style.actionSheet)
+        let input = UIAlertAction(title: "批量导入", style: UIAlertAction.Style.default, handler: nil)
         let add = UIAlertAction(title: "添加行", style: UIAlertAction.Style.default, handler: {(UIAlertAction) -> Void in self.addStudentInfo()})
         let delete = UIAlertAction(title: "删除行", style: UIAlertAction.Style.destructive, handler: {(UIAlertAction) -> Void in self.setEditStatus()})
         let cancel = UIAlertAction(title: "取消", style: UIAlertAction.Style.cancel, handler: nil)
+        actionSheet.addAction(input)
         actionSheet.addAction(add)
         actionSheet.addAction(delete)
         actionSheet.addAction(cancel)
@@ -59,7 +61,7 @@ class StudentListVC: UIViewController {
         tableView.setEditing(false, animated: true)
         
         self.navigationItem.leftBarButtonItem?.isEnabled = true
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "导入", style: UIBarButtonItem.Style.plain, target: self, action: nil)
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "刷新", style: UIBarButtonItem.Style.plain, target: self, action: nil)
     }
     
     @objc func refreshList() {

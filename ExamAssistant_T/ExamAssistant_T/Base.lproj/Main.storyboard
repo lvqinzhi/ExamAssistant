@@ -14,7 +14,7 @@
             <objects>
                 <viewController id="Rh8-Yc-dQw" customClass="SeatTableVC" customModule="ExamAssistant_T" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eml-QW-3jd">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="qAL-nQ-iJ8"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -23,12 +23,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SXf-Zg-Odg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1393" y="-354"/>
+            <point key="canvasLocation" x="1392" y="-354"/>
         </scene>
-        <!--LoginVC-->
+        <!--User LoginVC-->
         <scene sceneID="T8X-yP-rx7">
             <objects>
-                <viewController id="bD2-Se-CJN" customClass="LoginVC" customModule="ExamAssistant_T" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="bD2-Se-CJN" customClass="UserLoginVC" customModule="ExamAssistant_T" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QsU-Se-g0S">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -60,22 +60,12 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SE2-Kt-c3U">
-                                <rect key="frame" x="157" y="343" width="60" height="31"/>
+                                <rect key="frame" x="165" y="352" width="60" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="登录"/>
                                 <connections>
                                     <action selector="userLogin:" destination="bD2-Se-CJN" eventType="touchUpInside" id="SOV-83-D07"/>
-                                    <segue destination="TBo-tJ-bZh" kind="modal" id="7mv-jY-ez9"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b8w-87-d51">
-                                <rect key="frame" x="157" y="390" width="60" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="注册"/>
-                                <connections>
-                                    <action selector="userRegister:" destination="bD2-Se-CJN" eventType="touchUpInside" id="7n9-Dh-9O4"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -84,13 +74,14 @@
                     </view>
                     <navigationItem key="navigationItem" id="R18-4Z-2iQ"/>
                     <connections>
-                        <outlet property="userAccount" destination="9q5-wX-yWG" id="258-Vx-sL6"/>
-                        <outlet property="userPassword" destination="dZW-Vc-aAx" id="181-7S-QqP"/>
+                        <outlet property="userAccount" destination="E2l-uR-djL" id="wmd-W8-LWW"/>
+                        <outlet property="userPassword" destination="W1g-yl-Ke3" id="jc2-rB-y8i"/>
+                        <segue destination="TBo-tJ-bZh" kind="presentation" identifier="userLogin" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="oum-Vw-maD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wYX-Ac-gRx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2034.4000000000001" y="311.82266009852219"/>
+            <point key="canvasLocation" x="-2035.3846153846152" y="311.37440758293837"/>
         </scene>
         <!--座位表-->
         <scene sceneID="Oc3-SG-bww">
@@ -98,7 +89,7 @@
                 <navigationController id="vJ7-mp-Kud" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="座位表" image="tablecells.fill" catalog="system" id="bBR-eh-WUH"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="KH8-Sq-4WH">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="56"/>
+                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -151,7 +142,7 @@
                 <navigationController id="rPh-p1-bo3" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="个人中心" image="star.circle.fill" catalog="system" id="ZEt-4H-ulG"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="mQn-Ka-7ij">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="56"/>
+                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -167,7 +158,7 @@
             <objects>
                 <viewController id="cvd-jC-JiQ" customClass="UserCenterVC" customModule="ExamAssistant_T" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="D2d-pa-u07">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="0hF-qE-dqU"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -184,7 +175,7 @@
                 <navigationController id="ajy-c5-gC5" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="名单" image="person.circle.fill" catalog="system" id="uJ6-LE-wF8"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="zq6-ao-vKA">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="56"/>
+                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -200,7 +191,7 @@
             <objects>
                 <viewController id="FOY-7g-C0J" customClass="StudentListVC" customModule="ExamAssistant_T" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="98b-iL-TAd">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="Opi-Lc-sSY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -219,7 +210,7 @@
             <objects>
                 <viewController id="YZt-qp-3F7" customClass="StudentDetailVC" customModule="ExamAssistant_T" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="H00-Tr-liK">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="PpQ-lo-OjK"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
