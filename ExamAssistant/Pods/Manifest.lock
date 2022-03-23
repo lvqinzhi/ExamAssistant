@@ -1,0 +1,35 @@
+PODS:
+  - Flutter (1.0.0)
+  - flutter_seat_table (0.0.1):
+    - Flutter
+  - FlutterPluginRegistrant (0.0.1):
+    - Flutter
+  - OHMySQL (3.1.0)
+
+DEPENDENCIES:
+  - Flutter (from `../flutter_seat_table/.ios/Flutter/engine`)
+  - flutter_seat_table (from `../flutter_seat_table/.ios/Flutter`)
+  - FlutterPluginRegistrant (from `../flutter_seat_table/.ios/Flutter/FlutterPluginRegistrant`)
+  - OHMySQL
+
+SPEC REPOS:
+  trunk:
+    - OHMySQL
+
+EXTERNAL SOURCES:
+  Flutter:
+    :path: "../flutter_seat_table/.ios/Flutter/engine"
+  flutter_seat_table:
+    :path: "../flutter_seat_table/.ios/Flutter"
+  FlutterPluginRegistrant:
+    :path: "../flutter_seat_table/.ios/Flutter/FlutterPluginRegistrant"
+
+SPEC CHECKSUMS:
+  Flutter: bdfa2e8fe0e2880a2c6a58a0b1a8675c262a07af
+  flutter_seat_table: 75d2f928ba8b23c092f06e87f8b6f3b6adeb05e7
+  FlutterPluginRegistrant: 2afd5ea46d3a949472c9b7da6462d8fbf7d8b16e
+  OHMySQL: 667d1c14947315abf57c26f40ecb16fa9ba8baa0
+
+PODFILE CHECKSUM: 2e44618668c7baa3fdc9d081292b2e5d0ca38df4
+
+COCOAPODS: 1.11.2

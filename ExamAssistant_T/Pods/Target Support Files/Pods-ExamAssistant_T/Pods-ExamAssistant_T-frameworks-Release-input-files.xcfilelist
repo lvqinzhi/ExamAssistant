@@ -1,5 +1,0 @@
-${PODS_ROOT}/Target Support Files/Pods-ExamAssistant_T/Pods-ExamAssistant_T-frameworks.sh
-${BUILT_PRODUCTS_DIR}/OHMySQL/OHMySQL.framework
-${PODS_ROOT}/../../flutter_seat_table/.ios/Flutter/App.framework
-${PODS_XCFRAMEWORKS_BUILD_DIR}/Flutter/Flutter.framework/Flutter
-${PODS_XCFRAMEWORKS_BUILD_DIR}/OHMySQL/MySQL.framework/MySQL
