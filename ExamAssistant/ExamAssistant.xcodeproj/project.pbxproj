@@ -12,9 +12,10 @@
 		8E00508527CDF8FA006978EA /* UserCenterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E00508427CDF8FA006978EA /* UserCenterVC.swift */; };
 		8E07044327DCD740006B8248 /* AddStudentInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E07044127DCD740006B8248 /* AddStudentInfoVC.swift */; };
 		8E2155AD27EB0CD700A09A8D /* StudentMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2155AC27EB0CD700A09A8D /* StudentMainVC.swift */; };
+		8E2155AF27ECF4B700A09A8D /* QRCodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2155AE27ECF4B700A09A8D /* QRCodeVC.swift */; };
+		8E2155B127ECFE0100A09A8D /* QRCodeScannerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2155B027ECFE0100A09A8D /* QRCodeScannerVC.swift */; };
 		8E22EC9B27E6BFF800342ED2 /* StudentListVCExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E22EC9A27E6BFF800342ED2 /* StudentListVCExtension.swift */; };
 		8E22ECA627E6CDC000342ED2 /* StudentDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E22ECA427E6CDC000342ED2 /* StudentDetailVC.swift */; };
-		8E22ECA927E6D44800342ED2 /* AddStudentInfoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E22ECA827E6D44800342ED2 /* AddStudentInfoVC.xib */; };
 		8E4D037827E0ABBB009035D8 /* UserLoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4D037727E0ABBB009035D8 /* UserLoginVC.swift */; };
 		8E72C3E827D5F3C6006785C6 /* StudentListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E72C3E727D5F3C6006785C6 /* StudentListVC.swift */; };
 		8E963FAA27BFB04700305F77 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E963FA927BFB04700305F77 /* AppDelegate.swift */; };
@@ -33,9 +34,10 @@
 		8E00508427CDF8FA006978EA /* UserCenterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCenterVC.swift; sourceTree = "<group>"; };
 		8E07044127DCD740006B8248 /* AddStudentInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddStudentInfoVC.swift; sourceTree = "<group>"; };
 		8E2155AC27EB0CD700A09A8D /* StudentMainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentMainVC.swift; sourceTree = "<group>"; };
+		8E2155AE27ECF4B700A09A8D /* QRCodeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeVC.swift; sourceTree = "<group>"; };
+		8E2155B027ECFE0100A09A8D /* QRCodeScannerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeScannerVC.swift; sourceTree = "<group>"; };
 		8E22EC9A27E6BFF800342ED2 /* StudentListVCExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentListVCExtension.swift; sourceTree = "<group>"; };
 		8E22ECA427E6CDC000342ED2 /* StudentDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentDetailVC.swift; sourceTree = "<group>"; };
-		8E22ECA827E6D44800342ED2 /* AddStudentInfoVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddStudentInfoVC.xib; sourceTree = "<group>"; };
 		8E4D037727E0ABBB009035D8 /* UserLoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLoginVC.swift; sourceTree = "<group>"; };
 		8E72C3E727D5F3C6006785C6 /* StudentListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentListVC.swift; sourceTree = "<group>"; };
 		8E963FA627BFB04700305F77 /* ExamAssistant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExamAssistant.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -82,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				8E2155AC27EB0CD700A09A8D /* StudentMainVC.swift */,
+				8E2155AE27ECF4B700A09A8D /* QRCodeVC.swift */,
 			);
 			path = StudentClient;
 			sourceTree = "<group>";
@@ -135,7 +138,6 @@
 				8E72C3E727D5F3C6006785C6 /* StudentListVC.swift */,
 				8E22EC9A27E6BFF800342ED2 /* StudentListVCExtension.swift */,
 				8E07044127DCD740006B8248 /* AddStudentInfoVC.swift */,
-				8E22ECA827E6D44800342ED2 /* AddStudentInfoVC.xib */,
 				8E22ECA427E6CDC000342ED2 /* StudentDetailVC.swift */,
 			);
 			path = StudentList;
@@ -145,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				8E00508427CDF8FA006978EA /* UserCenterVC.swift */,
+				8E2155B027ECFE0100A09A8D /* QRCodeScannerVC.swift */,
 			);
 			path = UserCenter;
 			sourceTree = "<group>";
@@ -221,7 +224,6 @@
 			files = (
 				8E963FB927BFB04800305F77 /* LaunchScreen.storyboard in Resources */,
 				8E963FB627BFB04800305F77 /* Assets.xcassets in Resources */,
-				8E22ECA927E6D44800342ED2 /* AddStudentInfoVC.xib in Resources */,
 				8E963FB127BFB04700305F77 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -295,7 +297,9 @@
 				8E963FAA27BFB04700305F77 /* AppDelegate.swift in Sources */,
 				8E07044327DCD740006B8248 /* AddStudentInfoVC.swift in Sources */,
 				8E22EC9B27E6BFF800342ED2 /* StudentListVCExtension.swift in Sources */,
+				8E2155AF27ECF4B700A09A8D /* QRCodeVC.swift in Sources */,
 				8E963FAC27BFB04700305F77 /* SceneDelegate.swift in Sources */,
+				8E2155B127ECFE0100A09A8D /* QRCodeScannerVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

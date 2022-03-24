@@ -57,7 +57,7 @@
                                 <rect key="frame" x="154" y="264" width="179" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SE2-Kt-c3U">
                                 <rect key="frame" x="165" y="352" width="60" height="31"/>
@@ -74,8 +74,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="R18-4Z-2iQ"/>
                     <connections>
-                        <outlet property="userAccount" destination="E2l-uR-djL" id="wmd-W8-LWW"/>
-                        <outlet property="userPassword" destination="W1g-yl-Ke3" id="jc2-rB-y8i"/>
+                        <outlet property="userAccountTextField" destination="E2l-uR-djL" id="UVv-z4-qqx"/>
+                        <outlet property="userPasswordTextField" destination="W1g-yl-Ke3" id="Rk4-1c-pbH"/>
                         <segue destination="TBo-tJ-bZh" kind="presentation" identifier="teacherLogin" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="oum-Vw-maD"/>
                         <segue destination="Nic-Zf-muc" kind="presentation" identifier="studentLogin" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="vBb-12-nBG"/>
                     </connections>
@@ -135,7 +135,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FmJ-ZB-Gba" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-895" y="1695"/>
+            <point key="canvasLocation" x="-895" y="2082"/>
         </scene>
         <!--Student MainVC-->
         <scene sceneID="hko-Si-pPc">
@@ -148,10 +148,54 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="ZlK-Tl-axy"/>
+                    <connections>
+                        <segue destination="7ml-Sa-JPw" kind="presentation" identifier="showQRCode" id="c75-Pk-4cf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L02-YU-eYc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-6" y="1695"/>
+            <point key="canvasLocation" x="-6" y="2082"/>
+        </scene>
+        <!--CodeVC-->
+        <scene sceneID="cu5-ym-fJx">
+            <objects>
+                <viewController id="T70-Qs-LgE" customClass="QRCodeVC" customModule="ExamAssistant" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yp0-p8-YZh">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OMn-60-rxy">
+                                <rect key="frame" x="105" y="138" width="180" height="180"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="cTj-T9-bxp"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="dPs-Pu-Iri"/>
+                    <connections>
+                        <outlet property="qrCodeImageView" destination="OMn-60-rxy" id="EP0-kT-DS5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CHD-jB-SDg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2077" y="1641"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="TKr-jr-X5O">
+            <objects>
+                <navigationController id="7ml-Sa-JPw" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="oM8-a3-Ps6">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="T70-Qs-LgE" kind="relationship" relationship="rootViewController" id="eHW-FX-pDU"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bNQ-R3-g1i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1186" y="1641"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="zrh-rg-LVv">
@@ -197,6 +241,9 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="0o2-71-7ql"/>
+                    <connections>
+                        <segue destination="mqf-x2-aBh" kind="presentation" identifier="showQRCodeScannerVC" id="8xp-Jd-l7A"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b97-gZ-MO8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -231,7 +278,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="Vz7-Ph-cJj"/>
                     <connections>
-                        <segue destination="YZt-qp-3F7" kind="show" identifier="showStudentDetail" id="11I-sy-EoY"/>
+                        <segue destination="YZt-qp-3F7" kind="show" identifier="showStudentDetailVC" id="11I-sy-EoY"/>
+                        <segue destination="2ak-rN-c90" kind="presentation" identifier="showAddStudentInfoVC" id="2ag-mm-grK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ece-5X-0f4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -252,7 +300,142 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SEB-7L-E7h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2326" y="278"/>
+            <point key="canvasLocation" x="2617" y="-172"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ScG-5x-2xO">
+            <objects>
+                <navigationController id="2ak-rN-c90" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="c2q-lb-qdi"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="80n-5v-giu">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="HYb-zP-PNZ" kind="relationship" relationship="rootViewController" id="TUZ-ic-51u"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HHY-cG-ydY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2617" y="460"/>
+        </scene>
+        <!--Add Student InfoVC-->
+        <scene sceneID="V8P-no-fJP">
+            <objects>
+                <viewController id="HYb-zP-PNZ" customClass="AddStudentInfoVC" customModule="ExamAssistant" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WqV-L6-kUS">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="学号：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bNy-LY-r2q">
+                                <rect key="frame" x="49" y="87" width="52" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BU7-8W-BdO">
+                                <rect key="frame" x="128" y="80" width="231" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="姓名：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uhe-lC-E91">
+                                <rect key="frame" x="49" y="140" width="52" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QOQ-fS-rVR">
+                                <rect key="frame" x="128" y="133" width="231" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="联系方式：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JFh-gE-JUO">
+                                <rect key="frame" x="32" y="253" width="87" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0vo-w0-AvZ">
+                                <rect key="frame" x="128" y="246" width="231" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IJG-xA-gxh">
+                                <rect key="frame" x="124" y="316" width="143" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="录入本场考试"/>
+                                <connections>
+                                    <action selector="importStuInfo:" destination="HYb-zP-PNZ" eventType="touchUpInside" id="nfV-6v-Ien"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zwx-SN-OYf">
+                                <rect key="frame" x="128" y="188" width="231" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="班级：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IEG-bK-j8Y">
+                                <rect key="frame" x="49" y="195" width="52" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ISb-eH-EoU"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="TvD-rC-0MN"/>
+                    <connections>
+                        <outlet property="classTextField" destination="Zwx-SN-OYf" id="caF-6V-4Pw"/>
+                        <outlet property="nameTextField" destination="QOQ-fS-rVR" id="osW-IW-8Xh"/>
+                        <outlet property="numberTextField" destination="BU7-8W-BdO" id="FVh-3e-XGb"/>
+                        <outlet property="phoneTextField" destination="0vo-w0-AvZ" id="bOH-pA-wxE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KF1-C6-f7d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3505" y="460"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="6HW-4e-btS">
+            <objects>
+                <navigationController id="mqf-x2-aBh" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qKp-0I-j65">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="wi2-Ty-7J3" kind="relationship" relationship="rootViewController" id="krk-PJ-N9J"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M0b-nl-WIB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3062" y="1159"/>
+        </scene>
+        <!--Code ScannerVC-->
+        <scene sceneID="2b3-5r-7ur">
+            <objects>
+                <viewController id="wi2-Ty-7J3" customClass="QRCodeScannerVC" customModule="ExamAssistant" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BMc-hW-qHB">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="v2F-uP-jAc"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="rhc-u5-Vnp"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ldJ-Dg-dt4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3949" y="1159"/>
         </scene>
     </scenes>
     <resources>

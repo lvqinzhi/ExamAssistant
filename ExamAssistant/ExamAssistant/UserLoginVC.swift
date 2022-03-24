@@ -14,8 +14,8 @@ class UserLoginVC: UIViewController {
     let context = MySQLQueryContext()
     var sqlConnectStatus: Bool = false
     
-    @IBOutlet weak var userAccount: UITextField!
-    @IBOutlet weak var userPassword: UITextField!
+    @IBOutlet weak var userAccountTextField: UITextField!
+    @IBOutlet weak var userPasswordTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,19 +24,19 @@ class UserLoginVC: UIViewController {
         self.navigationController?.navigationBar.prefersLargeTitles = true
         self.navigationItem.largeTitleDisplayMode = UINavigationItem.LargeTitleDisplayMode.automatic
         
-        let user = OHMySQLUser(user: "root", password: "20000508", serverName: "localhost", dbName: "ExamAssistant", port: 3306, socket: nil)
-        coordinator = MySQLStoreCoordinator(configuration: user)
+        let sqlUser = OHMySQLUser(user: "root", password: "20000508", serverName: "localhost", dbName: "ExamAssistant", port: 3306, socket: nil)
+        coordinator = MySQLStoreCoordinator(configuration: sqlUser)
         coordinator.encoding = .UTF8MB4
         coordinator.connect()
         sqlConnectStatus = coordinator.isConnected
     }
     
     @IBAction func userLogin(_ sender: Any) {
-        if userAccount.text == "" || userPassword.text == "" {
+        if userAccountTextField.text == "" || userPasswordTextField.text == "" {
             showEmptyAlert()
         } else if sqlConnectStatus == true {
             context.storeCoordinator = coordinator
-            let condition = String(format: "uid = '%@' and upasswd = '%@'", userAccount.text!, userPassword.text!)
+            let condition = String(format: "uid = '%@' and upasswd = '%@'", userAccountTextField.text!, userPasswordTextField.text!)
             let query = MySQLQueryRequestFactory.select("user_account", condition: condition)
             
             do {
@@ -51,22 +51,23 @@ class UserLoginVC: UIViewController {
             } catch {
                 contextErrorAlert()
             }
+            
         } else {
             connectErrorAlert()
         }
     }
     
     func showEmptyAlert() {
-        let alert = UIAlertController(title: "错误", message: "文本框内容不得为空，请检查后再次尝试！", preferredStyle: UIAlertController.Style.alert)
-        let yes = UIAlertAction(title: "确定", style: UIAlertAction.Style.default, handler: nil)
-        alert.addAction(yes)
+        let alert = UIAlertController(title: "错误", message: "文本框内容不得为空，请完善后再次尝试或退出应用！", preferredStyle: UIAlertController.Style.alert)
+        let ok = UIAlertAction(title: "确定", style: UIAlertAction.Style.default, handler: nil)
+        alert.addAction(ok)
         self.present(alert, animated: true, completion: nil)
     }
     
-    func connectErrorAlert() {
-        let alert = UIAlertController(title: "错误", message: "数据库连接失败，请检查网络连接或联系管理员。", preferredStyle: UIAlertController.Style.alert)
-        let yes = UIAlertAction(title: "确定", style: UIAlertAction.Style.default, handler: nil)
-        alert.addAction(yes)
+    func contextErrorAlert() {
+        let alert = UIAlertController(title: "错误", message: "账户信息错误，请核对您的用户信息后再次尝试。", preferredStyle: UIAlertController.Style.alert)
+        let ok = UIAlertAction(title: "确定", style: UIAlertAction.Style.default, handler: nil)
+        alert.addAction(ok)
         self.present(alert, animated: true, completion: nil)
     }
     
@@ -81,10 +82,10 @@ class UserLoginVC: UIViewController {
         self.present(actionSheet, animated: true, completion: nil)
     }
     
-    func contextErrorAlert() {
-        let alert = UIAlertController(title: "错误", message: "账户信息错误，请核对您的身份或用户信息是否有误。", preferredStyle: UIAlertController.Style.alert)
-        let yes = UIAlertAction(title: "确定", style: UIAlertAction.Style.default, handler: nil)
-        alert.addAction(yes)
+    func connectErrorAlert() {
+        let alert = UIAlertController(title: "错误", message: "数据库连接失败，请检查网络连接或联系管理员。", preferredStyle: UIAlertController.Style.alert)
+        let ok = UIAlertAction(title: "确定", style: UIAlertAction.Style.default, handler: nil)
+        alert.addAction(ok)
         self.present(alert, animated: true, completion: nil)
     }
     

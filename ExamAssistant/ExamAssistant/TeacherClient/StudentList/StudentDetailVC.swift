@@ -29,5 +29,7 @@ class StudentDetailVC: UIViewController {
         sqlConnectStatus = coordinator.isConnected
     }
     
+    // TODO: Search student information from database by student nnumber.
+    
 }
 

@@ -14,8 +14,8 @@ class SeatTableVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationItem.title = "电路原理 教三205"
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "刷新", style: UIBarButtonItem.Style.plain, target: self, action: #selector(showRefreshAlert))
+        self.navigationItem.title = "数据结构基础 教三201"
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "刷新", style: UIBarButtonItem.Style.plain, target: self, action: #selector(refreshTable))
         
         addChild(subFlutterVC)
         let safeFrame = self.view.safeAreaLayoutGuide.layoutFrame
@@ -24,10 +24,12 @@ class SeatTableVC: UIViewController {
         subFlutterVC.didMove(toParent: self)
     }
     
-    @objc func showRefreshAlert() {
+    @objc func refreshTable() {
+        // TODO: Flutter seat table refresh status from database.
+        
         let alert = UIAlertController(title: "完成", message: "学生状态刷新成功。", preferredStyle: UIAlertController.Style.alert)
-        let yes = UIAlertAction(title: "确定", style: UIAlertAction.Style.default, handler: nil)
-        alert.addAction(yes)
+        let ok = UIAlertAction(title: "确定", style: UIAlertAction.Style.default, handler: nil)
+        alert.addAction(ok)
         self.present(alert, animated: true, completion: nil)
     }
 

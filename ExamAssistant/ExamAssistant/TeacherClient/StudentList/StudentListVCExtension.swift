@@ -29,11 +29,11 @@ extension StudentListVC: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.tableView!.deselectRow(at: indexPath, animated: true)
         let studentName = studentData[indexPath.row]
-        self.performSegue(withIdentifier: "showStudentDetail", sender: studentName)
+        self.performSegue(withIdentifier: "showStudentDetailVC", sender: studentName)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "showStudentDetail" {
+        if segue.identifier == "showStudentDetailVC" {
             let controller = segue.destination as! StudentDetailVC
             controller.studentName = sender as? String
         }
@@ -43,6 +43,7 @@ extension StudentListVC: UITableViewDataSource, UITableViewDelegate {
         if tableView.isEditing {
             return UITableViewCell.EditingStyle.delete
         }
+        
         return UITableViewCell.EditingStyle.none
     }
     

@@ -5,4 +5,5 @@ target 'ExamAssistant' do
   pod 'OHMySQL'
   use_frameworks!
   install_all_flutter_pods(flutter_application_path)
+
 end
