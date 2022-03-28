@@ -20,9 +20,10 @@ class AddStudentInfoVC: UIViewController {
         super.viewDidLoad()
         
         self.navigationItem.title = "添加学生信息"
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "确定", style: UIBarButtonItem.Style.plain, target: self, action: #selector(enterAddInfo))
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "完成", style: UIBarButtonItem.Style.plain, target: self, action: #selector(finishAddInfo))
     }
     
+    // 检查文本框是否为空、输入内容是否合法，提醒或录入
     @IBAction func importStuInfo(_ sender: Any) {
         if numberTextField.text == "" || nameTextField.text == "" || classTextField.text == "" || phoneTextField.text == "" {
             showAddEmptyAlert()
@@ -31,16 +32,17 @@ class AddStudentInfoVC: UIViewController {
         } else {
             importTag = 1
             showSuccessAddAlert()
-            // TODO: Student information write to database.
         }
     }
     
+    // 判断是否为纯数字
     func isPureDigit(string: NSString) -> Bool {
         let scan: Scanner = Scanner(string: string as String)
         var val: Int = 0
         return scan.scanInt(&val) && scan.isAtEnd
     }
     
+    // 判断手机号是否合法（1开头11位）
     func isPhoneNumber(string: NSString?) -> Bool {
         if let correctNumber = string {
             let mobileTag = "^1\\d{10}$"
@@ -51,6 +53,7 @@ class AddStudentInfoVC: UIViewController {
         return false;
     }
     
+    // 提示内容为空
     @objc func showAddEmptyAlert() {
         let alert = UIAlertController(title: "错误", message: "请输入完整的信息！", preferredStyle: UIAlertController.Style.alert)
         let ok = UIAlertAction(title: "确定", style: UIAlertAction.Style.default, handler: nil)
@@ -58,6 +61,7 @@ class AddStudentInfoVC: UIViewController {
         self.present(alert, animated: true, completion: nil)
     }
     
+    // 提示内容不合法
     func showAddIllegalAlert() {
         let alert = UIAlertController(title: "错误", message: "请输入合法的信息！", preferredStyle: UIAlertController.Style.alert)
         let ok = UIAlertAction(title: "确定", style: UIAlertAction.Style.default, handler: nil)
@@ -65,6 +69,7 @@ class AddStudentInfoVC: UIViewController {
         self.present(alert, animated: true, completion: nil)
     }
     
+    // 提示录入成功
     func showSuccessAddAlert() {
         let alert = UIAlertController(title: "完成", message: String(format: "录入成功，请返回名单页查看。"), preferredStyle: UIAlertController.Style.alert)
         let ok = UIAlertAction(title: "确定", style: UIAlertAction.Style.default, handler: nil)
@@ -72,7 +77,8 @@ class AddStudentInfoVC: UIViewController {
         self.present(alert, animated: true, completion: nil)
     }
     
-    @objc func enterAddInfo() {
+    // 退出添加学生信息页
+    @objc func finishAddInfo() {
         if importTag == 0 {
             showEmptyExitAlert()
         } else {
@@ -80,6 +86,7 @@ class AddStudentInfoVC: UIViewController {
         }
     }
     
+    // 提示未录入但操作退出
     func showEmptyExitAlert() {
         let alert = UIAlertController(title: "警告", message: "您还没有录入任何信息，是否确定放弃已输入的内容并退出当前页？", preferredStyle: UIAlertController.Style.alert)
         let edit = UIAlertAction(title: "继续编辑", style: UIAlertAction.Style.cancel, handler: nil)

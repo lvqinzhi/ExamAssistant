@@ -17,6 +17,7 @@ class SeatTableVC: UIViewController {
         self.navigationItem.title = "数据结构基础 教三201"
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "刷新", style: UIBarButtonItem.Style.plain, target: self, action: #selector(refreshTable))
         
+        // Flutter作为子页面
         addChild(subFlutterVC)
         let safeFrame = self.view.safeAreaLayoutGuide.layoutFrame
         subFlutterVC.view.frame = safeFrame
@@ -24,9 +25,8 @@ class SeatTableVC: UIViewController {
         subFlutterVC.didMove(toParent: self)
     }
     
+    // 刷新学生签到状态
     @objc func refreshTable() {
-        // TODO: Flutter seat table refresh status from database.
-        
         let alert = UIAlertController(title: "完成", message: "学生状态刷新成功。", preferredStyle: UIAlertController.Style.alert)
         let ok = UIAlertAction(title: "确定", style: UIAlertAction.Style.default, handler: nil)
         alert.addAction(ok)

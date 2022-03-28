@@ -21,10 +21,12 @@ class QRCodeVC: UIViewController {
         qrCodeImageView.image = qrcodeImage
     }
     
+    // 关闭签到码页
     @objc func finishSignIn() {
         self.dismiss(animated: true, completion: nil)
     }
     
+    // 字符串生成二维码
     func generateQRCode(str: String) -> UIImage? {
         let data = str.data(using: String.Encoding.ascii)
         guard let filter = CIFilter(name: "CIQRCodeGenerator") else { return nil }

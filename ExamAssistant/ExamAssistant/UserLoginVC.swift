@@ -24,6 +24,7 @@ class UserLoginVC: UIViewController {
         self.navigationController?.navigationBar.prefersLargeTitles = true
         self.navigationItem.largeTitleDisplayMode = UINavigationItem.LargeTitleDisplayMode.automatic
         
+        // 连接MySQL，并保存连接状态
         let sqlUser = OHMySQLUser(user: "root", password: "20000508", serverName: "localhost", dbName: "ExamAssistant", port: 3306, socket: nil)
         coordinator = MySQLStoreCoordinator(configuration: sqlUser)
         coordinator.encoding = .UTF8MB4
@@ -31,6 +32,7 @@ class UserLoginVC: UIViewController {
         sqlConnectStatus = coordinator.isConnected
     }
     
+    // 判断文本框是否为空、用户信息是否正确，提醒或选择身份后进入主页
     @IBAction func userLogin(_ sender: Any) {
         if userAccountTextField.text == "" || userPasswordTextField.text == "" {
             showEmptyAlert()
@@ -38,25 +40,25 @@ class UserLoginVC: UIViewController {
             context.storeCoordinator = coordinator
             let condition = String(format: "uid = '%@' and upasswd = '%@'", userAccountTextField.text!, userPasswordTextField.text!)
             let query = MySQLQueryRequestFactory.select("user_account", condition: condition)
-            
+
             do {
                 let response = try context.executeQueryRequestAndFetchResult(query)
                 
+                // response计数为0，即根据上述条件差不到相关记录，即用户名或密码错误
                 if response.count == 0 {
                     contextErrorAlert()
                 } else {
                    showIdentifySheet()
                 }
-                
             } catch {
                 contextErrorAlert()
             }
-            
         } else {
             connectErrorAlert()
         }
     }
     
+    // 提示文本框为空
     func showEmptyAlert() {
         let alert = UIAlertController(title: "错误", message: "文本框内容不得为空，请完善后再次尝试或退出应用！", preferredStyle: UIAlertController.Style.alert)
         let ok = UIAlertAction(title: "确定", style: UIAlertAction.Style.default, handler: nil)
@@ -64,6 +66,7 @@ class UserLoginVC: UIViewController {
         self.present(alert, animated: true, completion: nil)
     }
     
+    // 提示输入信息与数据库中不符
     func contextErrorAlert() {
         let alert = UIAlertController(title: "错误", message: "账户信息错误，请核对您的用户信息后再次尝试。", preferredStyle: UIAlertController.Style.alert)
         let ok = UIAlertAction(title: "确定", style: UIAlertAction.Style.default, handler: nil)
@@ -71,6 +74,7 @@ class UserLoginVC: UIViewController {
         self.present(alert, animated: true, completion: nil)
     }
     
+    // 选择用户身份，跳转至不同页面
     func showIdentifySheet() {
         let actionSheet = UIAlertController(title: "请选择您的身份", message: "如有疑问请联系管理员。", preferredStyle: UIAlertController.Style.actionSheet)
         let teacher = UIAlertAction(title: "教师", style: UIAlertAction.Style.default, handler: {(UIAlertAction) -> Void in self.performSegue(withIdentifier: "teacherLogin", sender: nil)})
@@ -82,6 +86,7 @@ class UserLoginVC: UIViewController {
         self.present(actionSheet, animated: true, completion: nil)
     }
     
+    // 提示数据库无法连接
     func connectErrorAlert() {
         let alert = UIAlertController(title: "错误", message: "数据库连接失败，请检查网络连接或联系管理员。", preferredStyle: UIAlertController.Style.alert)
         let ok = UIAlertAction(title: "确定", style: UIAlertAction.Style.default, handler: nil)

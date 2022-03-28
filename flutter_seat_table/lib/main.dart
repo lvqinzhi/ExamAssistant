@@ -65,6 +65,7 @@ class _ClassSeatsPageState extends State<ClassSeatsPage> {
                 padding: const EdgeInsets.only(top: 10),
                 width: 60,
                 height: 40,
+                color: Colors.greenAccent,
                 child: Text(
                   str,
                   textAlign: TextAlign.center,

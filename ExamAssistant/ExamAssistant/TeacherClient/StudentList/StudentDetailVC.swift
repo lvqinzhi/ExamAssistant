@@ -6,30 +6,52 @@
 //
 
 import UIKit
-import OHMySQL
 
 class StudentDetailVC: UIViewController {
     
-    var studentName: String?
+    // 上级页面传值
+    var studentNumber: String?
     
-    var coordinator = MySQLStoreCoordinator()
-    let context = MySQLQueryContext()
-    var sqlConnectStatus: Bool = false
-
+    @IBOutlet weak var studentNumberTextField: UITextField!
+    @IBOutlet weak var studentNameTextField: UITextField!
+    @IBOutlet weak var studentClassTextField: UITextField!
+    @IBOutlet weak var studentPhoneTextField: UITextField!
+    @IBOutlet weak var studentStatusTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationItem.title = studentName
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "编辑", style: UIBarButtonItem.Style.plain, target: self, action: nil)
-        
-        let user = OHMySQLUser(user: "root", password: "20000508", serverName: "localhost", dbName: "ExamAssistant", port: 3306, socket: nil)
-        coordinator = MySQLStoreCoordinator(configuration: user)
-        coordinator.encoding = .UTF8MB4
-        coordinator.connect()
-        sqlConnectStatus = coordinator.isConnected
+        self.navigationItem.title = "学生详情"
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "编辑", style: UIBarButtonItem.Style.plain, target: self, action: #selector(textFieldEnabled))
+        // 文本框默认不可编辑，进入编辑模式才能进行编辑操作
+        textFieldUnenabled()
+        studentNumberTextField.text = studentNumber
     }
     
-    // TODO: Search student information from database by student nnumber.
+    // 文本框进入编辑状态，进入编辑模式
+    @objc func textFieldEnabled() {
+        studentNumberTextField.isEnabled = true
+        studentNameTextField.isEnabled = true
+        studentClassTextField.isEnabled = true
+        studentPhoneTextField.isEnabled = true
+        studentStatusTextField.isEnabled = true
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "完成", style: UIBarButtonItem.Style.plain, target: self, action: #selector(finishStudentInfoEdit))
+    }
+    
+    // 结束编辑模式
+    @objc func finishStudentInfoEdit() {
+        textFieldUnenabled()
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "编辑", style: UIBarButtonItem.Style.plain, target: self, action: #selector(textFieldEnabled))
+    }
+    
+    // 取消文本框编辑状态
+    func textFieldUnenabled() {
+        studentNumberTextField.isEnabled = false
+        studentNameTextField.isEnabled = false
+        studentClassTextField.isEnabled = false
+        studentPhoneTextField.isEnabled = false
+        studentStatusTextField.isEnabled = false
+    }
     
 }
 
