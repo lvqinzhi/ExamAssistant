@@ -33,7 +33,10 @@ class UserCenterVC: UIViewController, UITableViewDataSource, UITableViewDelegate
     @objc func showQRCodeScannerVC() {
         authorizeCameraWith {[weak self] (reslut) in
             if reslut {
-                self?.performSegue(withIdentifier: "showQRCodeScannerVC", sender: nil)
+                // 刷新主线程
+                DispatchQueue.main.async {
+                    self?.performSegue(withIdentifier: "showQRCodeScannerVC", sender: nil)
+                }
             } else {
                 // 权限拒绝，进入系统设置
                 DispatchQueue.main.asyncAfter(deadline: .now()+1.0, execute: {
