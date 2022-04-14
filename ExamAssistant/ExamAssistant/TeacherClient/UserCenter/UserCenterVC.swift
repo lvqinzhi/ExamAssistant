@@ -62,9 +62,9 @@ class UserCenterVC: UIViewController, UITableViewDataSource, UITableViewDelegate
             comletion(false)
             break
         // 首次启动，直接授权
-        case AVAuthorizationStatus.notDetermined:
-            AVCaptureDevice.requestAccess(for: AVMediaType.video, completionHandler: { (granted:Bool) in
-                comletion(granted)
+        case AVAuthorizationStatus.notDetermined: AVCaptureDevice.requestAccess(
+            for: AVMediaType.video, completionHandler: {
+                (granted:Bool) in comletion(granted)
             })
             break
         default:
@@ -119,8 +119,6 @@ class UserCenterVC: UIViewController, UITableViewDataSource, UITableViewDelegate
     
     // 通过下标判断点击不同行并执行不同操作
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.tableView!.deselectRow(at: indexPath, animated: true)
-        
         switch indexPath.row {
         case 0:
             showDevelopingAlert()

@@ -24,7 +24,12 @@ class UserLoginVC: UIViewController {
         self.navigationController?.navigationBar.prefersLargeTitles = true
         self.navigationItem.largeTitleDisplayMode = UINavigationItem.LargeTitleDisplayMode.automatic
         
-        // 连接MySQL，并保存连接状态
+        let mysqlConnectThread = Thread(target: self, selector: #selector(mysqlConnect), object: nil)
+        mysqlConnectThread.start()
+    }
+    
+    // 连接MySQL，并保存连接状态
+    @objc func mysqlConnect() {
         let sqlUser = OHMySQLUser(user: "root", password: "20000508", serverName: "localhost", dbName: "ExamAssistant", port: 3306, socket: nil)
         coordinator = MySQLStoreCoordinator(configuration: sqlUser)
         coordinator.encoding = .UTF8MB4
@@ -40,7 +45,7 @@ class UserLoginVC: UIViewController {
             context.storeCoordinator = coordinator
             let condition = String(format: "uid = '%@' and upasswd = '%@'", userAccountTextField.text!, userPasswordTextField.text!)
             let query = MySQLQueryRequestFactory.select("user_account", condition: condition)
-
+            
             do {
                 let response = try context.executeQueryRequestAndFetchResult(query)
                 

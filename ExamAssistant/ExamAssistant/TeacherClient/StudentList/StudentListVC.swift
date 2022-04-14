@@ -91,9 +91,9 @@ class StudentListVC: UIViewController, UITableViewDataSource, UITableViewDelegat
     
     // 以学号为关键字，点击跳转至学生信息详情页
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.tableView!.deselectRow(at: indexPath, animated: true)
         let studentNumber = studentData[indexPath.row]
         self.performSegue(withIdentifier: "showStudentDetailVC", sender: studentNumber)
+        self.tableView!.deselectRow(at: indexPath, animated: true)
     }
     
     // 传值至二级页面

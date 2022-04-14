@@ -72,9 +72,9 @@ class StudentMainVC: UIViewController, UITableViewDataSource, UITableViewDelegat
     
     // 以考试名称为关键字，点击跳转至考试信息详情页
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.tableView!.deselectRow(at: indexPath, animated: true)
         let examName = examData[indexPath.row]
         self.performSegue(withIdentifier: "showExamDetailVC", sender: examName)
+        self.tableView!.deselectRow(at: indexPath, animated: true)
     }
     
     // 传值至二级页面

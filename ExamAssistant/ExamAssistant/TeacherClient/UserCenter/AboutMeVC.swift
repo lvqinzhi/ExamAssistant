@@ -12,7 +12,7 @@ class AboutMeVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationItem.title = "关于我"
+        self.navigationItem.title = "关于"
     }
 
 }

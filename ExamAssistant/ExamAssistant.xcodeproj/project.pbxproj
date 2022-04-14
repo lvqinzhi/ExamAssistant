@@ -18,13 +18,13 @@
 		8E2155AF27ECF4B700A09A8D /* QRCodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2155AE27ECF4B700A09A8D /* QRCodeVC.swift */; };
 		8E2155B127ECFE0100A09A8D /* QRCodeScannerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2155B027ECFE0100A09A8D /* QRCodeScannerVC.swift */; };
 		8E22ECA627E6CDC000342ED2 /* StudentDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E22ECA427E6CDC000342ED2 /* StudentDetailVC.swift */; };
+		8E472EDA28078C01008BC445 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E472ED928078C01008BC445 /* Assets.xcassets */; };
 		8E4D037827E0ABBB009035D8 /* UserLoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4D037727E0ABBB009035D8 /* UserLoginVC.swift */; };
 		8E72C3E827D5F3C6006785C6 /* StudentListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E72C3E727D5F3C6006785C6 /* StudentListVC.swift */; };
 		8E963FAA27BFB04700305F77 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E963FA927BFB04700305F77 /* AppDelegate.swift */; };
 		8E963FAC27BFB04700305F77 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E963FAB27BFB04700305F77 /* SceneDelegate.swift */; };
 		8E963FAE27BFB04700305F77 /* SeatTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E963FAD27BFB04700305F77 /* SeatTableVC.swift */; };
 		8E963FB127BFB04700305F77 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E963FAF27BFB04700305F77 /* Main.storyboard */; };
-		8E963FB627BFB04800305F77 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E963FB527BFB04800305F77 /* Assets.xcassets */; };
 		8E963FB927BFB04800305F77 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E963FB727BFB04800305F77 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +42,7 @@
 		8E2155AE27ECF4B700A09A8D /* QRCodeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeVC.swift; sourceTree = "<group>"; };
 		8E2155B027ECFE0100A09A8D /* QRCodeScannerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeScannerVC.swift; sourceTree = "<group>"; wrapsLines = 1; };
 		8E22ECA427E6CDC000342ED2 /* StudentDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentDetailVC.swift; sourceTree = "<group>"; };
+		8E472ED928078C01008BC445 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8E4D037727E0ABBB009035D8 /* UserLoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLoginVC.swift; sourceTree = "<group>"; };
 		8E72C3E727D5F3C6006785C6 /* StudentListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentListVC.swift; sourceTree = "<group>"; };
 		8E963FA627BFB04700305F77 /* ExamAssistant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExamAssistant.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -49,7 +50,6 @@
 		8E963FAB27BFB04700305F77 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		8E963FAD27BFB04700305F77 /* SeatTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeatTableVC.swift; sourceTree = "<group>"; };
 		8E963FB027BFB04700305F77 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		8E963FB527BFB04800305F77 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8E963FB827BFB04800305F77 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8E963FBA27BFB04800305F77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -122,7 +122,7 @@
 				8E963FAB27BFB04700305F77 /* SceneDelegate.swift */,
 				8E963FAF27BFB04700305F77 /* Main.storyboard */,
 				8E963FB727BFB04800305F77 /* LaunchScreen.storyboard */,
-				8E963FB527BFB04800305F77 /* Assets.xcassets */,
+				8E472ED928078C01008BC445 /* Assets.xcassets */,
 				8E963FBA27BFB04800305F77 /* Info.plist */,
 			);
 			path = ExamAssistant;
@@ -229,7 +229,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8E963FB927BFB04800305F77 /* LaunchScreen.storyboard in Resources */,
-				8E963FB627BFB04800305F77 /* Assets.xcassets in Resources */,
+				8E472EDA28078C01008BC445 /* Assets.xcassets in Resources */,
 				8E963FB127BFB04700305F77 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
